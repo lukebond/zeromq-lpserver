@@ -69,3 +69,7 @@ $ node lpserver
 1406654717912 - Got a request for work
 1406654718013 - Got a request for work
 ```
+
+## Licence
+
+MIT
