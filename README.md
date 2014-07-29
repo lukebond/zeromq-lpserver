@@ -11,7 +11,7 @@ Use in conjunction with [Lazy Pirate Client](https://github.com/lukebond/zeromq-
 ### Lazy Pirate example
 
 lpclient.js (taken from https://github.com/lukebond/zeromq-lpclient/blob/master/example/example.js):
-```
+```javascript
 var LPClient = require('../index');
 
 var lpc = new LPClient({url: 'tcp://127.0.0.1:9000', timeout: 2500});
@@ -26,7 +26,7 @@ lpc.ready();
 ```
 
 lpserver.js (taken from https://github.com/lukebond/zeromq-lpserver/blob/master/example/example.js):
-```
+```javascript
 var LPServer = require('../index');
 
 function workerFn(cb) {
