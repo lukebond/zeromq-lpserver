@@ -10,7 +10,7 @@ Use in conjunction with [Lazy Pirate Client](https://github.com/lukebond/zeromq-
 
 ### Lazy Pirate example
 
-lpclient.js (taken from https://github.com/lukebond/zeromq-lpclient/blob/master/example/example.js):
+`lpclient.js` (taken from https://github.com/lukebond/zeromq-lpclient/blob/master/example/example.js):
 ```javascript
 var LPClient = require('../index');
 
@@ -25,7 +25,7 @@ lpc.on('message', function (message) {
 lpc.ready();
 ```
 
-lpserver.js (taken from https://github.com/lukebond/zeromq-lpserver/blob/master/example/example.js):
+`lpserver.js` (taken from https://github.com/lukebond/zeromq-lpserver/blob/master/example/example.js):
 ```javascript
 var LPServer = require('../index');
 
