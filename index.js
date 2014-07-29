@@ -2,7 +2,8 @@ var zmq = require('zmq'),
     util = require('util'),
     EventEmitter = require('events').EventEmitter;
 
-var LPServer = function (options) {
+var LPServer = function (options, workerFn) {
+  this.workerFn = workerFn;
   this.sock = zmq.socket('rep');
   this.sock.bind(options.url, function (err) {
     if (err) {
@@ -11,7 +12,12 @@ var LPServer = function (options) {
 
     var cycles = 0;
     this.sock.on('message', function (msg) {
-      this.sock.send('some work');
+      this.workerFn(function (data) {
+        this.sock.send(data);
+      }.bind(this));
+
+      // the following code pretends to fail in various ways,
+      // in order to test whether or not  the client can handle it
       //++cycles;
       //if (cycles > 3 && Math.floor(Math.random() * 3) === 0) {
       //  // ignore
