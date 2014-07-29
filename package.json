@@ -1,0 +1,25 @@
+{
+  "name": "zeromq-lpserver",
+  "version": "1.0.0",
+  "description": "Node.js implementation of ZeroMQ Lazy Pirate server",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukebond/zeromq-lpserver"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zmq",
+    "zeromq",
+    "pirate",
+    "lazy",
+    "server"
+  ],
+  "author": "Luke Bond <luke.n.bond@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "zmq": "2.7.x"
+  }
+}
