@@ -8,6 +8,19 @@ Don't know what this is? See the [0MQ Guide](http://zguide.zeromq.org/page:all#t
 
 Use in conjunction with [Lazy Pirate Client](https://github.com/lukebond/zeromq-lpclient).
 
+Make sure you have 0MQ installed on your machine first (ie. the C libraries). For OS X you can do this:
+
+```
+$ brew install --universal zeromq
+```
+
+On Ubuntu:
+```
+$ sudo apt-get -y install libzmq3-dev
+```
+
+Then you should be able to install NPM modules that depend upon the 0MQ libs (like this one).
+
 ### Lazy Pirate example
 
 `lpclient.js` (taken from https://github.com/lukebond/zeromq-lpclient/blob/master/example/example.js):
